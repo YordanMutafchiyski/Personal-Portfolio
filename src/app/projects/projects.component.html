@@ -1,1 +1,50 @@
-<p>projects works!</p>
+<div class="header">
+  <h1>Experience</h1>
+  <h4>This is my project for creating portfolio with help of Angular.</h4>
+</div>
+
+<div class="main-container">
+  <div class="form-container">
+    <h1>Job Experience Form</h1>
+    <form (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="company">Company</label>
+        <input id="company" formControlName="company" type="text" />
+      </div>
+      <div class="form-group">
+        <label for="duration">Duration</label>
+        <input id="duration" formControlName="duration" type="text" />
+      </div>
+      <div class="form-group">
+        <label for="description">Description</label>
+        <textarea
+          id="description"
+          formControlName="description"
+          rows="4"
+        ></textarea>
+      </div>
+      <div class="form-group">
+        <label for="job_description">Role</label>
+        <input
+          id="job_description"
+          formControlName="job_description"
+          type="text"
+        />
+      </div>
+      <div class="form-group">
+        <button type="submit">Submit</button>
+      </div>
+    </form>
+  </div>
+  <div class="container-projects">
+    @for (item of this.filteredProjects; track $index) {
+    <div>
+      <p><span>Duration: </span>{{ item.duration }}</p>
+      <p><span>Company: </span>{{ item.company }}</p>
+      <p><span>Role: </span>{{ item.job_description }}</p>
+      <p><span>Job Description: </span>{{ item.description }}</p>
+    </div>
+
+    }
+  </div>
+</div>

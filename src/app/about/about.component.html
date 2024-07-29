@@ -1,11 +1,40 @@
 <header>
-    <div class="title-container">
-        <h1>
-            Yordan Mutafchiyski
-        </h1>
-    </div>
-
+  <div class="title-container">
+    <div><img src="/assets/img/Picture2.jpg" alt="" /></div>
+    <h1>Yordan Mutafchiyski</h1>
+    <h2>Currently working as a Cloud Automation Developer in Broadcom</h2>
+  </div>
 </header>
 <div class="main-container">
+  <div class="info-container">
+    <div class="about-container">
+      <h3>About Me</h3>
+      
+      <p>I was born in Stara Zagora Bulgaria. I have graduated in Romain Rolland Language School.
+        Then I have moved to Sofia where I have graduated Technical University of Sofia with Software Engineering.
+        I have started my tech journey in 2019 with my first job as a junior Developer in Dware where I Participate in designing and 
+        developing project for complete management of the processes that take place in tourist sites, hotels, restaurants, shops 
+        and warehouses by using .NET WPF, SQL Server Database and MVVM pattern. Participate in designing and 
+        developing project for complete management of the processes that take place in tourist sites, hotels, restaurants,     
+    shops and warehouses by using .NET WPF, SQL Server Database and MVVM pattern. 
+    <br>
+    <br>
+    The next step on my career was an intern in MentorMate and then I moved to my current job in VMware at Broadcom.Here I have participated
+    in many different projects using JS and Typescript and the VMware stack.
+    
+    </p>
+    
+    </div>
+    <div class="contact-container">
+      <h3>Contact</h3>
+      <ul>
+        @for (item of icons; track $index) {
+        <li><img [src]="item.src" />{{ item.name }}</li>
 
+        }@empty {
+        <li>No Icons</li>
+        }
+      </ul>
+    </div>
+  </div>
 </div>
